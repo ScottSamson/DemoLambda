@@ -38,12 +38,12 @@ If already installed check if new version is available.
 
 Execute unit tests
 ```
-    cd "HelloWord/test/HelloWord.Tests"
+    cd "HelloWorld/test/HelloWorld.Tests"
     dotnet test
 ```
 
 Deploy function to AWS Lambda
 ```
-    cd "HelloWord/src/HelloWord"
+    cd "HelloWorld/src/HelloWorld"
     dotnet lambda deploy-function
 ```
