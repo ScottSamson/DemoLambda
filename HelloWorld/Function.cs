@@ -35,12 +35,10 @@ namespace HelloWorld
         /// <returns></returns>
         public async Task<string> FunctionHandler(ILambdaContext context)
         {
-            bool upperCase = Convert.ToBoolean(Environment.GetEnvironmentVariable("uppercase"));
-
             GetObjectRequest request = new GetObjectRequest()
             {
-                BucketName = Environment.GetEnvironmentVariable("bucketName"),
-                Key = upperCase ? "uppercase.txt" : "lowercase.txt"
+                BucketName = "demo-app-file-bucket",
+                Key = "uppercase.txt"
             };
 
             using (GetObjectResponse response = await S3Client.GetObjectAsync(request))
